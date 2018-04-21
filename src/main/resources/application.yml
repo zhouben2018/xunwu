@@ -12,6 +12,9 @@ spring:
     mode: HTML5
   resources:                #静态资源访问
     static-locations: classpath:/static/
+  devtools:
+    restart:
+      exclude: templates/**,static/**
 
 #\u5173\u95EDhttp\u9A8C\u8BC1
 security:
