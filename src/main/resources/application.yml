@@ -9,7 +9,7 @@ spring:
   profiles:
     active: dev
   thymeleaf:                #thymeleaf
-    mode: HTML5
+    mode: HTML
   resources:                #静态资源访问
     static-locations: classpath:/static/
   devtools:

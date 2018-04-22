@@ -333,7 +333,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 .login_button::before {
 	background-color:#2591b4;
-	background-image:url(/static/images/admin/right_arrow.png);
+	background-image:url(/images/admin/right_arrow.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	content:"";
