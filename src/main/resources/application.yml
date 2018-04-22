@@ -23,5 +23,3 @@ security:
 logging:
   level: debug
 
-
-

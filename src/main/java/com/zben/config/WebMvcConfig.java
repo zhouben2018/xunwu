@@ -1,26 +1,14 @@
-/*
 package com.zben.config;
 
-import org.springframework.beans.BeansException;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.thymeleaf.spring4.SpringTemplateEngine;
-import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
-import org.thymeleaf.spring4.view.ThymeleafViewResolver;
-
-*/
 /**
  * @Author:zben
  * @Date: 2018/4/21/021 11:56
- *//*
+ */
 
+/*
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter implements
-        ApplicationContextAware{
+        ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
@@ -29,11 +17,12 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements
         this.applicationContext = applicationContext;
     }
 
-    */
+*/
 /**
      * 模板资源解析器
      * @return
      *//*
+
 
     @Bean
     @ConfigurationProperties(prefix = "spring.thymeleaf")
@@ -44,25 +33,30 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements
         return templateResolver;
     }
 
-    */
+*/
 /**
      * Thymeleaf标准方言解释器
      *//*
+
 
     @Bean
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         // 支持Spring EL表达式
-        templateEngine.setEnableSpringELCompiler(true);
+        //templateEngine.setEnableSpringELCompiler(true);
 
+        //支持springSecurity方言
+        SpringSecurityDialect springSecurityDialect = new SpringSecurityDialect();
+        templateEngine.addDialect(springSecurityDialect);
         return templateEngine;
     }
 
-    */
+*/
 /**
      * 视图解析器
      *//*
+
 
     @Bean
     public ThymeleafViewResolver viewResolver() {
@@ -71,54 +65,5 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements
         return viewResolver;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
+
