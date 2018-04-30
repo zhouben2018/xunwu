@@ -1,6 +1,6 @@
-#datasource
+
 spring:
-  datasource:
+  datasource:         #datasource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/xunwu
     username: root
@@ -10,3 +10,10 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     encoding: utf-8
+  http:               #multipart config
+    multipart:
+      enabled: true
+      location: D:\mySoft\idea-workspace\test\xunwu\tmp
+      file-size-threshold: 5MB
+      max-request-size: 20MB
+

@@ -598,7 +598,7 @@ input::-ms-clear {
     right: 0;
     top: 0;
     border-radius: 2px;
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 27px;
@@ -689,7 +689,7 @@ input::-ms-clear {
     top: 0;
     left: 0;
     z-index: 1;
-    background: url('/static/images/loading.gif') center no-repeat
+    background: url('/images/loading.gif') center no-repeat
 }
 
 .overview .img .thumbnail {
@@ -813,7 +813,7 @@ input::-ms-clear {
 
 .overview .content .price .unit i, .overview .content .price .payNorm i {
     margin: 0 auto;
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 9px;
@@ -876,7 +876,7 @@ input::-ms-clear {
     position: absolute;
     right: -25px;
     top: -31px;
-    background: url('/static/images/isRemove.png') no-repeat
+    background: url('/images/isRemove.png') no-repeat
 }
 
 .overview .content .price.isRemove .total, .overview .content .price.isRemove .unit {
@@ -952,7 +952,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .communityName i {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 10px;
@@ -970,7 +970,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .areaName i {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 10px;
@@ -992,7 +992,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .schoolName .icon {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 10px;
@@ -1005,7 +1005,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .schoolName .schoolType {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 14px;
@@ -1016,7 +1016,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .schoolName .more {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 13px;
@@ -1045,7 +1045,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .schoolName .more ul li i {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 14px;
@@ -1062,7 +1062,7 @@ input::-ms-clear {
 }
 
 .overview .content .aroundInfo .visitTime i {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 10px;
@@ -1424,7 +1424,7 @@ input::-ms-clear {
 }
 
 .around .content .container .map .item {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 35px;
@@ -1451,7 +1451,7 @@ input::-ms-clear {
 }
 
 .around .content .container .map .name .arrow {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 17px;
@@ -1494,7 +1494,7 @@ input::-ms-clear {
 }
 
 .around .content .container .list ul li i {
-    background-image: url("/static/images/spritesheet.png");
+    background-image: url("/images/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
     width: 23px;
@@ -1821,8 +1821,8 @@ input::-ms-clear {
 }
 
 .introduction-wrapper .introduction .introContent .zf-tag .se li.tags span {
-    background-image: url("/static/images/zf-icon2.png");
-    background-image: -webkit-image-set(url("/static/images/zf-icon2.png") 1x, url("/static/images/zf-icon2@2x.png") 2x)
+    background-image: url("/images/zf-icon2.png");
+    background-image: -webkit-image-set(url("/images/zf-icon2.png") 1x, url("/images/zf-icon2@2x.png") 2x)
 }
 
 .introduction-wrapper .introduction .introContent .zf-tag li {

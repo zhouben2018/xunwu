@@ -269,7 +269,7 @@ body {
 }
 
 .filter-box .bd .circle-look-house a.house-a i {
-    background: url(/static/images/sprite_lb.png) no-repeat -10px -28px;
+    background: url(/images/sprite_lb.png) no-repeat -10px -28px;
     width: 10px;
     height: 5px;
     display: inline-block;
@@ -494,7 +494,7 @@ body {
 }
 
 .filter-bar span.save i {
-    background: url(/static/images/sprite_lb.png) no-repeat -118px -79px;
+    background: url(/images/sprite_lb.png) no-repeat -118px -79px;
     width: 19px;
     height: 19px;
     display: inline-block;
@@ -515,7 +515,7 @@ body {
 }
 
 .filter-bar a.del-all i {
-    background: url(/static/images/sprite_lb.png) no-repeat -55px -75px;
+    background: url(/images/sprite_lb.png) no-repeat -55px -75px;
     width: 19px;
     height: 19px;
     display: inline-block;
@@ -658,7 +658,7 @@ body {
 }
 
 .sort-panel .item-check li a i {
-    background: url(/static/images/sprite_lb.png) no-repeat -9px -8px;
+    background: url(/images/sprite_lb.png) no-repeat -9px -8px;
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -672,7 +672,7 @@ body {
 }
 
 .sort-panel .item-check li a.check-a i {
-    background: url(/static/images/sprite_lb.png) no-repeat -27px -8px
+    background: url(/images/sprite_lb.png) no-repeat -27px -8px
 }
 
 .sort-bar {
@@ -748,7 +748,7 @@ body {
 }
 
 .sort-bar .sort-parent i {
-    background: url(/static/images/sprite_lb.png) no-repeat -10px -28px;
+    background: url(/images/sprite_lb.png) no-repeat -10px -28px;
     width: 10px;
     height: 5px;
     display: inline-block;
@@ -834,11 +834,11 @@ body {
 }
 
 .saveerror {
-    background: url(/static/images/error.jpg) no-repeat
+    background: url(/images/error.jpg) no-repeat
 }
 
 .saveerror .fl {
-    background: url(/static/images/save-bg.png) no-repeat -82px 0
+    background: url(/images/save-bg.png) no-repeat -82px 0
 }
 
 .saveerror .fr span {
@@ -1048,14 +1048,14 @@ body {
 }
 
 .con-box .list-head .view-type .modeshow .h-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -31px -38px;
+    background: url(/images/sprite_lb.png) no-repeat -31px -38px;
     display: inline-block;
     width: 18px;
     height: 15px
 }
 
 .con-box .list-head .view-type .modeshow .m-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -50px -38px;
+    background: url(/images/sprite_lb.png) no-repeat -50px -38px;
     display: inline-block;
     width: 18px;
     height: 15px
@@ -1066,7 +1066,7 @@ body {
 }
 
 .con-box .list-head .view-type .modeshow .l-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -9px -38px;
+    background: url(/images/sprite_lb.png) no-repeat -9px -38px;
     display: inline-block;
     width: 18px;
     height: 15px;
@@ -1074,14 +1074,14 @@ body {
 }
 
 .con-box .list-head .view-type .l-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -9px -56px;
+    background: url(/images/sprite_lb.png) no-repeat -9px -56px;
     display: inline-block;
     width: 20px;
     height: 15px
 }
 
 .con-box .list-head .view-type .h-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -31px -56px;
+    background: url(/images/sprite_lb.png) no-repeat -31px -56px;
     display: inline-block;
     width: 18px;
     height: 15px;
@@ -1095,7 +1095,7 @@ body {
 }
 
 .con-box .list-head .view-type .m-show i {
-    background: url(/static/images/sprite_lb.png) no-repeat -50px -56px;
+    background: url(/images/sprite_lb.png) no-repeat -50px -56px;
     display: inline-block;
     width: 18px;
     height: 15px
@@ -1457,7 +1457,7 @@ body {
 }
 
 .five {
-    background: url('/static/images/sprite_lb.png') no-repeat -98px -7px;
+    background: url('/images/sprite_lb.png') no-repeat -98px -7px;
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -1494,7 +1494,7 @@ body {
 }
 
 .taxfree {
-    background: url('/static/images/sprite_lb.png') no-repeat -98px -7px;
+    background: url('/images/sprite_lb.png') no-repeat -98px -7px;
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -1670,7 +1670,7 @@ body {
 }
 
 .fang05 {
-    background: url('/static/images/sprite_lb.png') no-repeat -46px -7px;
+    background: url('/images/sprite_lb.png') no-repeat -46px -7px;
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -1706,7 +1706,7 @@ body {
 }
 
 .heating {
-    background: url('/static/images/sprite_lb.png') no-repeat -125px -7px;
+    background: url('/images/sprite_lb.png') no-repeat -125px -7px;
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -1759,7 +1759,7 @@ body {
 }
 
 .fang-subway {
-    background: url('/static/images/sprite_lb.png') no-repeat -72px -7px;
+    background: url('/images/sprite_lb.png') no-repeat -72px -7px;
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -1796,7 +1796,7 @@ body {
     line-height: 30px;
     padding: 0 29px;
     border: 1px solid #d14b27;
-    background: #ee562b url(/static/images/btn-bg.png) repeat-x;
+    background: #ee562b url(/images/btn-bg.png) repeat-x;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -1890,7 +1890,7 @@ body {
     -moz-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
     border: 1px solid #1f66c3;
-    background: #1f6bdf url(/static/images/search-btn-side.png) no-repeat center 0
+    background: #1f6bdf url(/images/search-btn-side.png) no-repeat center 0
 }
 
 .main-box .side-bar .search-widget .btn:hover {

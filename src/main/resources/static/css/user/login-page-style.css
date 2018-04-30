@@ -104,7 +104,7 @@ img {
 /*end reset*/
 /****-----start-body----****/
 body {
-    background: url(/static/images/user/bg1.jpg) no-repeat 0px 0px;
+    background: url(/images/user/bg1.jpg) no-repeat 0px 0px;
     font-family: 'Open Sans', sans-serif;
     background-size: cover;
     -webkit-background-size: cover;
@@ -177,7 +177,7 @@ input[type="text"] {
     color: #9199aa;
     font-size: 18px;
     outline: none;
-    background: url(/static/images/user/adm.png) no-repeat 10px 15px;
+    background: url(/images/user/adm.png) no-repeat 10px 15px;
     border: none;
     font-weight: 100;
     border-bottom: 1px solid #484856;
@@ -190,7 +190,7 @@ input[type="password"] {
     color: #dd3e3e;
     font-size: 18px;
     outline: none;
-    background: url(/static/images/user/key.png) no-repeat 10px 23px;
+    background: url(/images/user/key.png) no-repeat 10px 23px;
     border: none;
     font-weight: 100;
     border-bottom: 1px solid #484856;
@@ -198,7 +198,7 @@ input[type="password"] {
 }
 
 .key {
-    /*background: url(/static/images/user/login/pass.png) no-repeat 447px 17px;*/
+    /*background: url(/images/user/login/pass.png) no-repeat 447px 17px;*/
 }
 
 input[type="submit"] {
@@ -269,19 +269,19 @@ label.lbl-3 {
 /*--start-responsive-design--*/
 @media (max-width: 1440px) {
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 376px 17px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 376px 17px;*/
     }
 }
 
 @media (max-width: 1366px) {
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 358px 19px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 358px 19px;*/
     }
 }
 
 @media (max-width: 1280px) {
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 336px 18px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 336px 18px;*/
     }
 
 }
@@ -292,7 +292,7 @@ label.lbl-3 {
     }
 
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 339px 18px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 339px 18px;*/
     }
 
     h1 {
@@ -307,7 +307,7 @@ label.lbl-3 {
     }
 
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 342px 18px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 342px 18px;*/
     }
 }
 
@@ -318,7 +318,7 @@ label.lbl-3 {
     }
 
     .key {
-        /*background: url(/static/images/user/login/pass.png) no-repeat 342px 19px;*/
+        /*background: url(/images/user/login/pass.png) no-repeat 342px 19px;*/
     }
 }
 
@@ -352,11 +352,11 @@ label.lbl-3 {
         font-size: 17px;
         margin-top: .5em;
         margin-bottom: 2em;
-        background: url(/static/images/user/key.png) no-repeat 8px 23px;
+        background: url(/images/user/key.png) no-repeat 8px 23px;
     }
 
     .key {
-        background: url(/static/images/user/pass.png) no-repeat 235px 27px;
+        background: url(/images/user/pass.png) no-repeat 235px 27px;
     }
 
     .avtar img {

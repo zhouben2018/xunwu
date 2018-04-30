@@ -151,7 +151,7 @@
             },
             dnd: '#dndArea',
             paste: '#uploader',
-            swf: '/static/lib/webuploader/0.1.5/Uploader.swf',
+            swf: '/lib/webuploader/0.1.5/Uploader.swf',
             chunked: false,
             chunkSize: 512 * 1024,
             server: '/admin/upload/photo',
