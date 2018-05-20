@@ -1,4 +1,4 @@
-package com.zben.service;
+package com.zben.service.user;
 
 import com.zben.entity.User;
 

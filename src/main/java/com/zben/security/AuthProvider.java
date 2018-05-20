@@ -1,7 +1,7 @@
 package com.zben.security;
 
 import com.zben.entity.User;
-import com.zben.service.IUserService;
+import com.zben.service.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.AuthenticationProvider;

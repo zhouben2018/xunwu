@@ -23,3 +23,10 @@ security:
 logging:
   level: debug
 
+#qiniu
+qiniu:
+  AccessKey: 5_plndB1D335QPzapLgBEY5JI8OBTIiB15_9GEZ_
+  SecretKey: VmPtaT4PfpkaTPzjNga7cjm0jSsAK2yd1O5V-5S7
+  Bucket: zb-qixiu
+  cdn:
+    prefix: p8106shz2.bkt.clouddn.com

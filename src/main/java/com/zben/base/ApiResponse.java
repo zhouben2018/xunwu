@@ -72,13 +72,12 @@ public class ApiResponse {
 
         SUCCESS(200, "OK"),
         BAD_REQUEST(400, "Bad Request"),
+        NOT_FOUND(404, "Not Found"),
         INTERNAL_SERVER_ERROR(500, "Unknown Internal Error"),
         NOT_VALID_PARAM(40005, "Not valid Params"),
         NOT_SUPPORTED_OPERATION(40006, "Operation not supported"),
         UPLOAD_ERROR(40007, "Upload Error"),
-        NOT_LOGIN(500000, "Not Login"),
-
-;
+        NOT_LOGIN(500000, "Not Login");
         private Integer code;
         private String msg;
 

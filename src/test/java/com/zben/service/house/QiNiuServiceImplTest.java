@@ -3,7 +3,6 @@ package com.zben.service.house;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.zben.DemoApplicationTests;
-import com.zben.service.IQiNiuService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

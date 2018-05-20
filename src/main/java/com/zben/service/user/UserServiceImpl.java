@@ -4,7 +4,6 @@ import com.zben.entity.User;
 import com.zben.repository.RoleRepository;
 import com.zben.repository.UserRepository;
 import com.zben.entity.Role;
-import com.zben.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.GrantedAuthority;

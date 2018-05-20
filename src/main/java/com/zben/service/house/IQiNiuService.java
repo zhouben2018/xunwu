@@ -1,4 +1,4 @@
-package com.zben.service;
+package com.zben.service.house;
 
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
