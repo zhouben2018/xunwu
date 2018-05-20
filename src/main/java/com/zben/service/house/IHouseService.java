@@ -1,7 +1,9 @@
 package com.zben.service.house;
 
 import com.zben.dto.HouseDTO;
+import com.zben.form.DataTableSearch;
 import com.zben.form.HouseForm;
+import com.zben.service.ServiceMultiResult;
 import com.zben.service.ServiceResult;
 
 /**
@@ -12,4 +14,8 @@ import com.zben.service.ServiceResult;
 public interface IHouseService {
 
     ServiceResult<HouseDTO> save(HouseForm houseForm);
+
+    ServiceMultiResult<HouseDTO> adminQuery(DataTableSearch searchBody);
+
+    ServiceResult<HouseDTO> findCompleteOne(Long id);
 }

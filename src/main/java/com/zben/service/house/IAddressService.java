@@ -5,6 +5,7 @@ import com.zben.dto.SubwayStationDTO;
 import com.zben.dto.SupportAddressDTO;
 import com.zben.entity.SupportAddress;
 import com.zben.service.ServiceMultiResult;
+import com.zben.service.ServiceResult;
 
 import java.util.List;
 import java.util.Map;
@@ -46,5 +47,19 @@ public interface IAddressService {
      * @return
      */
     List<SubwayStationDTO> findAllStationBySubway(Long subwayId);
+
+    /**
+     * 获取地铁线信息
+     * @param subwayId
+     * @return
+     */
+    ServiceResult<SubwayDTO> findSubway(Long subwayId);
+
+    /**
+     * 获取地铁站点信息
+     * @param stationId
+     * @return
+     */
+    ServiceResult<SubwayStationDTO> findSubwayStation(Long stationId);
 
 }

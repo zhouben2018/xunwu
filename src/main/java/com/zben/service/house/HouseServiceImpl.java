@@ -1,19 +1,28 @@
 package com.zben.service.house;
 
+import com.zben.base.HouseStatus;
 import com.zben.base.LoginUserUtil;
 import com.zben.dto.HouseDTO;
 import com.zben.dto.HouseDetailDTO;
 import com.zben.dto.HousePictureDTO;
 import com.zben.entity.*;
+import com.zben.form.DataTableSearch;
 import com.zben.form.HouseForm;
 import com.zben.form.PhotoForm;
 import com.zben.repository.*;
+import com.zben.service.ServiceMultiResult;
 import com.zben.service.ServiceResult;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -87,6 +96,82 @@ public class HouseServiceImpl implements IHouseService {
             houseDTO.setTags(tags);
         }
         return new ServiceResult<HouseDTO>(true, null, houseDTO);
+    }
+
+    @Override
+    public ServiceMultiResult<HouseDTO> adminQuery(DataTableSearch searchBody) {
+        List<HouseDTO> houseDTOs = new ArrayList<>();
+        Sort sort = new Sort(Sort.Direction.fromString(searchBody.getDirection()), searchBody.getOrderBy());
+        int page = searchBody.getStart() / searchBody.getLength();
+        Pageable pageable = new PageRequest(page, searchBody.getLength(), sort);
+        /*Specification<House> specification = new Specification<House>() {
+            @Override
+            public Predicate toPredicate(Root<House> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+                return null;
+            }
+        }*/
+        Specification<House> specification = (root, query, cb) -> {
+            Predicate predicate = cb.equal(root.get("adminId"), LoginUserUtil.getLoginUserId());
+            predicate = cb.and(predicate, cb.notEqual(root.get("status"), HouseStatus.DELETED.getValue()));
+            if (searchBody.getCity() != null) {
+                predicate = cb.and(predicate, cb.equal(root.get("cityEnName"), searchBody.getCity()));
+            }
+            if (searchBody.getStatus() != null) {
+                predicate = cb.and(predicate, cb.equal(root.get("status"), searchBody.getStatus()));
+            }
+            if (searchBody.getCreateTimeMin() != null) {
+                predicate = cb.and(predicate, cb.greaterThanOrEqualTo(root.get("createTime"), searchBody.getCreateTimeMin()));
+            }
+            if (searchBody.getCreateTimeMax() != null) {
+                predicate = cb.and(predicate, cb.lessThanOrEqualTo(root.get("createTime"), searchBody.getCreateTimeMax()));
+            }
+            if (searchBody.getTitle() != null) {
+                predicate = cb.and(predicate, cb.like(root.get("title"), "%" + searchBody.getTitle() + "%"));
+            }
+            return predicate;
+        };
+
+        Page<House> houses = houseRepository.findAll(specification, pageable);
+
+        houses.forEach(house -> {
+            HouseDTO houseDTO = modelMapper.map(house, HouseDTO.class);
+            houseDTO.setCover(this.cdnPrefix + "/" + house.getCover());
+            houseDTOs.add(houseDTO);
+        });
+        return new ServiceMultiResult<>(houses.getTotalElements(), houseDTOs);
+    }
+
+    /**
+     * 查找房源
+     * @param id
+     * @return
+     */
+    @Override
+    public ServiceResult<HouseDTO> findCompleteOne(Long id) {
+        House house = houseRepository.findOne(id);
+        if (house == null) {
+            return ServiceResult.notFound();
+        }
+
+        HouseDetail houseDetail = houseDetailRepository.findByHouseId(id);
+        List<HousePicture> pictures = housePictureRepository.findAllByHouseId(id);
+
+        HouseDetailDTO houseDetailDTO = modelMapper.map(houseDetail, HouseDetailDTO.class);
+        List<HousePictureDTO> housePictureDTOs = new ArrayList<>();
+        pictures.forEach(picture ->
+            housePictureDTOs.add(modelMapper.map(picture, HousePictureDTO.class))
+        );
+
+        List<HouseTag> tags = houseTagRepository.findAllByHouseId(id);
+        List<String> tagList = new ArrayList<>();
+        tags.forEach(tag ->
+            tagList.add(tag.getName())
+        );
+        HouseDTO result = modelMapper.map(house, HouseDTO.class);
+        result.setHouseDetail(houseDetailDTO);
+        result.setPictures(housePictureDTOs);
+        result.setTags(tagList);
+        return ServiceResult.of(result);
     }
 
     /**

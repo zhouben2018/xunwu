@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date: 2018/4/30/030 10:55
  */
 public interface HouseDetailRepository extends JpaRepository<HouseDetail, Long> {
+    HouseDetail findByHouseId(Long id);
 }

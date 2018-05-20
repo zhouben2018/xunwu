@@ -10,6 +10,7 @@ import com.zben.repository.SubwayRepository;
 import com.zben.repository.SubwayStationRepository;
 import com.zben.repository.SupportAddressRepository;
 import com.zben.service.ServiceMultiResult;
+import com.zben.service.ServiceResult;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -102,5 +103,29 @@ public class AddressServiceImpl implements IAddressService {
 
         stations.forEach(station -> result.add(modelMapper.map(station, SubwayStationDTO.class)));
         return result;
+    }
+
+    @Override
+    public ServiceResult<SubwayDTO> findSubway(Long subwayId) {
+        if (subwayId == null) {
+            return ServiceResult.notFound();
+        }
+        Subway subway = subwayRepository.findOne(subwayId);
+        if (subway == null) {
+            return ServiceResult.notFound();
+        }
+        return ServiceResult.of(modelMapper.map(subway, SubwayDTO.class));
+    }
+
+    @Override
+    public ServiceResult<SubwayStationDTO> findSubwayStation(Long stationId) {
+        if (stationId == null) {
+            return ServiceResult.notFound();
+        }
+        SubwayStation station = subwayStationRepository.findOne(stationId);
+        if (station == null) {
+            return ServiceResult.notFound();
+        }
+        return ServiceResult.of(modelMapper.map(station, SubwayStationDTO.class));
     }
 }
