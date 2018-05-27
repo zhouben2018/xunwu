@@ -1,9 +1,12 @@
 package com.zben.service.user;
 
+import com.zben.dto.UserDTO;
 import com.zben.entity.User;
 import com.zben.repository.RoleRepository;
 import com.zben.repository.UserRepository;
 import com.zben.entity.Role;
+import com.zben.service.ServiceResult;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,6 +29,8 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Override
     public User findUserByName(String userName) {
@@ -42,5 +47,15 @@ public class UserServiceImpl implements IUserService {
 
         user.setAuthorityList(authorityList);
         return user;
+    }
+
+    @Override
+    public ServiceResult<UserDTO> findById(Long userId) {
+        User user = userRepository.findOne(userId);
+        if (user == null) {
+            return ServiceResult.notFound();
+        }
+        UserDTO userDTO = modelMapper.map(user, UserDTO.class);
+        return ServiceResult.of(userDTO);
     }
 }

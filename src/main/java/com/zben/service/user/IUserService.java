@@ -1,6 +1,8 @@
 package com.zben.service.user;
 
+import com.zben.dto.UserDTO;
 import com.zben.entity.User;
+import com.zben.service.ServiceResult;
 
 /**
  * 用户服务
@@ -9,4 +11,6 @@ import com.zben.entity.User;
  */
 public interface IUserService {
     User findUserByName(String userName);
+
+    ServiceResult<UserDTO> findById(Long adminId);
 }
